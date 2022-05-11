@@ -27,5 +27,5 @@
 - 제목은 `[Week{num}] 이름 : 푼 문제 이름` 형식으로 작성합니다.
 - ex) `[Week1] 김재원: 튜플, 거리두기 확인하기, 조이스틱`
 #### 5. 문제 저장 규칙
-- `src/홍길동/{num}week/문제파일들`
-- ex) `src/jaewon/1week/문제 제목.kt`
+- `src/홍길동/week{num}/문제파일들`
+- ex) `src/jaewon/week1/문제 제목.kt`
