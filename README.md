@@ -14,15 +14,18 @@
 - [백준](https://www.acmicpc.net/) : `실버`
 ---
 ### :white_check_mark: 규칙
-#### 1. Issue 작성 규칙
+#### 1. branch 이름 작성 규칙
+- branch 명은 `week{num}_{이름}` 형식으로 작성합니다.
+- ex) `week1_jaewon`
+#### 2. Issue 작성 규칙
 - 제목은 `[{num}주차]유형이름 :memo:` 형식으로 작성합니다.
 - ex) `[1주차 문제] 브루트포스 📝`
-#### 2. 문제 업로드 규칙
+#### 3. 문제 업로드 규칙
 - Issue에 comment로 `{문제 제목} {문제 링크}` 형식으로 작성합니다.
 - ex) `신규 아이디 추천 https://programmers.co.kr/learn/courses/30/lessons/72410`
-#### 3. PR 작성 규칙
+#### 4. PR 작성 규칙
 - 제목은 `[Week{num}] 이름 : 푼 문제 이름` 형식으로 작성합니다.
 - ex) `[Week1] 김재원: 튜플, 거리두기 확인하기, 조이스틱`
-#### 4. 문제 저장 규칙
+#### 5. 문제 저장 규칙
 - `src/홍길동/{num}week/문제파일들`
 - ex) `src/jaewon/1week/문제 제목.kt`
