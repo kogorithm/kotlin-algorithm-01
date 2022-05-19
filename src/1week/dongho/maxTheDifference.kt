@@ -4,7 +4,7 @@ import java.io.*
 import java.util.*
 import kotlin.math.*
 
-fun <T> List<T>.permutation(num: Int): List<List<T>> {
+fun <T> List<T>.permutation1(num: Int): List<List<T>> {
     if (num == 1) {
         return map { v: T ->
             listOf(v)
@@ -18,7 +18,7 @@ fun <T> List<T>.permutation(num: Int): List<List<T>> {
             it.addAll(this.subList(0, i))
             it.addAll(this.subList(i + 1, length))
             it
-        }.permutation(num - 1)
+        }.permutation1(num - 1)
         val attach = permutations.map { permutation ->
             mutableListOf(current).run {
                 addAll(permutation)
@@ -42,7 +42,7 @@ fun main() {
     val st = StringTokenizer(br.readLine())
     val list = IntRange(1, N).map { st.nextToken().toInt() }
 
-    val answer = list.permutation(N).maxOf { it.assignDiff() }
+    val answer = list.permutation1(N).maxOf { it.assignDiff() }
     bw.write("$answer\n")
 
     bw.flush()
