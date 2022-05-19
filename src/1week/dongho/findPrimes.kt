@@ -1,4 +1,4 @@
-package `1week`.dongho.findPrimes
+package `1week`.dongho
 
 class Solution {
     fun <T> List<T>.permutation(num: Int): List<List<T>> {

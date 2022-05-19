@@ -1,6 +1,7 @@
-package `1week`.dongho.leave
+package `1week`.dongho
 
 import java.io.*
+import java.util.*
 
 fun <T> List<T>.combination(num: Int): List<List<T>> {
     if (num == 1) {
@@ -27,36 +28,19 @@ fun String.parseIntPair(): Pair<Int, Int> {
     return Pair(a.toInt(), b.toInt())
 }
 
-fun List<Triple<Int, Int, Int>>.avaiableMax(maxDate: Int): Int? {
-    var totalPrice = 0
-    this.fold(0) { prev, (day, range, price) ->
-        if (prev >= day || (day + range - 1) > maxDate) {
-            return null
-        }
-        totalPrice += price
-        day + range - 1
-    }
-    return totalPrice
-}
-
 fun main() {
     val br = BufferedReader(InputStreamReader(System.`in`))
     val bw = BufferedWriter(OutputStreamWriter(System.out))
-    val N = br.readLine().toInt()
-    val tripleList = IntRange(1, N).map {
-        val (range, price) = br.readLine().parseIntPair()
-        Triple(it, range, price)
+    val (N, S) = br.readLine().parseIntPair()
+    val token = StringTokenizer(br.readLine())
+
+    val list = IntRange(1, N).map {
+        token.nextToken().toInt()
+    }
+    val answer = IntRange(1, N).fold(0) { prev, next ->
+        prev + list.combination(next).filter { it.sum() == S }.count()
     }
 
-    val answer = IntRange(1, N).maxOf {
-        tripleList.combination(it).fold<List<Triple<Int, Int, Int>>, MutableList<Int>>(mutableListOf()) { prev, next ->
-            val result = next.avaiableMax(N)
-            if (result != null) {
-                prev.add(result)
-            }
-            prev
-        }.maxOfOrNull { it }?: 0
-    }
     bw.write("$answer\n")
     bw.flush()
     bw.close()

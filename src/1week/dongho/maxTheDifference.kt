@@ -1,4 +1,4 @@
-package `1week`.dongho.maxTheDifference
+package `1week`.dongho
 
 import java.io.*
 import java.util.*
