@@ -4,6 +4,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 var result = 0
+val tempSet = mutableSetOf<Int>()
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val n = readLine().map { "$it".toInt() }
 
@@ -14,6 +15,8 @@ fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
             makeNumber(permutation(it).distinct())
         }
     }
+
+    tempSet.forEach { if(isPrime(it))result++ }
     print(result)
 }
 
@@ -23,10 +26,7 @@ fun makeNumber(list: List<List<Int>>) {
         it.forEach { int ->
             number = "${number}${int}"
         }
-        println("숫자는 : $number")
-        if(number[0] != '0'){
-            if(isPrime(number.toInt())) result++
-        }
+        tempSet.add(number.toInt())
         number = ""
     }
 }
