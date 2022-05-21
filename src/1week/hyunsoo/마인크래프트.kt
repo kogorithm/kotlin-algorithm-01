@@ -35,7 +35,6 @@ fun main(){
             timeAndHeight[0] = digAndPut
             timeAndHeight[1] = std
         }
-
     }
     bw.write("${timeAndHeight[0]} ${timeAndHeight[1]}")
     bw.flush()
