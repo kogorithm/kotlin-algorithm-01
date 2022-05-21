@@ -13,7 +13,7 @@ class inputKeypad {
                 '1' to Pair(0, 0),
                 '4' to Pair(0, 1),
                 '7' to Pair(0, 2),
-                '*' to Pair(0, 2),
+                '*' to Pair(0, 3),
                 '2' to Pair(1, 0),
                 '5' to Pair(1, 1),
                 '8' to Pair(1, 2),
