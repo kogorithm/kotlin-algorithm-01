@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/kogorithm.iml" filepath="$PROJECT_DIR$/.idea/kogorithm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/src.iml" filepath="$PROJECT_DIR$/src/src.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/kotlin-algorithm-01.iml" filepath="$PROJECT_DIR$/.idea/kotlin-algorithm-01.iml" />
     </modules>
   </component>
 </project>
