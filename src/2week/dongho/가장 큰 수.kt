@@ -8,8 +8,7 @@ class Solution {
     }
 
     fun solution(numbers: IntArray): String {
-        val sort = numbers.sortedWith({ a, b -> (b.toString() + a.toString()).compareTo(a.toString() + b.toString()) })
-        val answer = sort.joinToString("") { it.toString() }
+        val answer = numbers.sortedWith { a, b -> ("$b$a").compareTo("$a$b") }.joinToString("") { it.toString() }
         return if (answer.first() === '0') "0" else answer
     }
 }
