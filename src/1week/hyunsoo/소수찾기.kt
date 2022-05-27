@@ -1,5 +1,5 @@
 import kotlin.math.sqrt
-class Solution {
+class Solution1 {
     val numbersList = mutableListOf<Int>()
     val checkedVisit = BooleanArray(7, { false })
     val resultList = mutableListOf<Int>()

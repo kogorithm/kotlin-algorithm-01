@@ -1,6 +1,6 @@
 package `2week`.hyunsoo
 
-class Solution {
+class Solution2 {
     fun solution(citations: IntArray): Int {
         var answer = 0
         citations.sort()

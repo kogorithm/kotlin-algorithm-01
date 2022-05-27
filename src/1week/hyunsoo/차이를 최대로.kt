@@ -2,13 +2,13 @@ import kotlin.math.abs
 
 val size = readln().toInt()
 val num = readln().split(" ").map { it.toInt() }
-val visited = BooleanArray(num.size, { false })
+val visited1 = BooleanArray(num.size, { false })
 val result = mutableListOf<Int>()
-var ans = 0
+var ans2 = 0
 fun main() {
 
     permutation(0, size)
-    println(ans)
+    println(ans2)
 
 }
 
@@ -16,7 +16,7 @@ fun main() {
 fun permutation(cnt : Int, depth : Int) {
     if (cnt == depth) {
         // 이전 순열의 최대값(ans)보다 현재 순열의 최대값이 더 크다면 갱신
-        if (getMax(result) > ans) ans = getMax(result)
+        if (getMax(result) > ans2) ans2 = getMax(result)
         return
     }
     for (i in 0 until num.size) {
