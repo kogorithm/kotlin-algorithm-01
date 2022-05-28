@@ -10,7 +10,7 @@ class `가장 큰 수` {
     class Solution {
 
         fun solution(numbers: IntArray): String {
-            val answer = numbers.sortedWith { a, b -> ("$b$a").compareTo("$a$b") }.joinToString("") { it.toString() }
+            val answer = numbers.sortedWith { a, b -> ("$b$a").compareTo("$a$b") }.joinToString("")
             return if (answer.first() === '0') "0" else answer
         }
     }

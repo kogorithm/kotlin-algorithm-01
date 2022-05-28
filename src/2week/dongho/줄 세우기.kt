@@ -40,5 +40,5 @@ fun main() {
         }
     }
 
-    println(result.map { it.toString() }.joinToString(" "))
+    println(result.joinToString(" "))
 }
