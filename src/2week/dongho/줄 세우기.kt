@@ -29,7 +29,7 @@ fun main() {
     }
 
     var current: Int
-    while (!q.isEmpty()) {
+    while (q.isNotEmpty()) {
         current = q.poll()
         result.offer(current)
         for (i in graph[current]) {
