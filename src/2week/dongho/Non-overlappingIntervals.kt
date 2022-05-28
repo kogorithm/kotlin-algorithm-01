@@ -11,7 +11,8 @@ class `Non-overlappingIntervals` {
         fun eraseOverlapIntervals(intervals: Array<IntArray>): Int {
             var connectedCount = 1
             val length = intervals.size
-            intervals.sortWith(Comparator { a: IntArray, b: IntArray -> a[1] - b[1] })
+            intervals.sortBy { it[1] }
+//            intervals.sortWith(Comparator { a: IntArray, b: IntArray -> a[1] - b[1] })
             var prevEnd = intervals.first().get(1)
             for (i in 1 until length) {
                 val (start, end) = intervals.get(i)
