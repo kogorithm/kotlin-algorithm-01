@@ -1,10 +1,10 @@
-var ans:Int = 0
+var ans: Int = 0
 
 fun main() {
-    val (n, s) = readln().split(" ").map{it.toInt()}
-    val arr = readln().split(" ").map{it.toInt()}.toIntArray()
+    val (n, s) = readln().split(" ").map { it.toInt() }
+    val arr = readln().split(" ").map { it.toInt() }.toIntArray()
 
-    subSum(n, s, arr,0, 0, 0)
+    subSum(n, s, arr, 0, 0, 0)
 
     if (s == 0) {
         ans--

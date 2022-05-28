@@ -1,15 +1,15 @@
-val n = readln().toInt()
-val arr = readln().split(" ").map{it.toInt()}.toIntArray()
-var newArr = IntArray(n)
-var visited = BooleanArray(n, {false})
-var max: Int = Int.MIN_VALUE
-
 fun main() {
     permutation(0)
-    println(max)
 }
 
-fun permutation(depth: Int) {
+fun permutation(depth: Int): Int {
+    val n = readln().toInt()
+    val arr = readln().split(" ").map{it.toInt()}.toIntArray()
+    var newArr = IntArray(n)
+    var visited = BooleanArray(n, {false})
+    var max: Int = Int.MIN_VALUE
+
+
     if (depth == n) {
         var sum = 0;
         for (i in 0 until n-1) {
@@ -29,4 +29,5 @@ fun permutation(depth: Int) {
             visited[i] = false
         }
     }
+    return max
 }
