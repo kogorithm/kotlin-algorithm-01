@@ -10,16 +10,14 @@ class `가장 큰 수` {
 
     class Solution {
         fun solution(numbers: IntArray): String {
-            var answer = ""
-            numbers.sortedWith(Comparator { a, b ->
+            var answer = numbers.sortedWith { a, b ->
                 val aString = a.toString()
                 val bString = b.toString()
-                (bString+aString).compareTo(aString+bString)
-            }).forEach { answer += it.toString()}
+                ("$bString$aString").compareTo("$aString$bString")
+            }.joinToString("")
 
-            if(answer[0] == '0') answer ="0"
 
-            return answer
+            return if(answer[0] == '0') "0" else answer
         }
     }
 }

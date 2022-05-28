@@ -14,8 +14,8 @@ fun main()  {
     }
 
     repeat(q){
-        val quiz = br.readLine().split(" ").map { it.toInt()}
-        val answer = sumList[quiz[1]]-sumList[quiz[0]-1]
+        val (start,end) = br.readLine().split(" ").map { it.toInt()}
+        val answer = sumList[end]-sumList[start-1]
 
         bw.write("$answer\n")
     }
