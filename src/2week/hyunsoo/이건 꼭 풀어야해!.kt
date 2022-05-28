@@ -18,7 +18,6 @@ fun main() {
     // 정렬 후 누적 합 계산. ex) sumOfB[3]은 arrayB[0] ~ arrayB[2]의 합이 담기게 됨.
     arrayB.forEachIndexed { index, it ->
         sumOfB[index + 1] = sumOfB[index] + it
-
     }
 
     repeat(Q) {
@@ -26,7 +25,6 @@ fun main() {
         var ans = sumOfB[range[1]] - sumOfB[range[0] - 1]
 
         bw.write("$ans\n")
-
     }
     bw.flush()
     bw.close()

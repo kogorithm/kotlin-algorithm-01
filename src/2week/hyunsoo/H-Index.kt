@@ -5,6 +5,8 @@ class Solution2 {
         var answer = 0
         citations.sort()
 
+        // 어차피 정렬돼서 그냥 마지막 인덱스를 사용해도 될듯.
+        // =>  citations[citations.lastIndex]
         for (no in 0 .. citations.maxOf { it }){
             var quote = 0
             var notQuote = 0
