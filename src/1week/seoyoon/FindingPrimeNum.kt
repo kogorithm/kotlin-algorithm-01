@@ -1,6 +1,6 @@
 import kotlin.math.sqrt
 
-class Solution {
+class Week1SYSolution {
     var visited = BooleanArray(7, {false})
     val set: MutableSet<Int> = mutableSetOf()
     var depth: Int = 0
