@@ -11,7 +11,7 @@ class `위장` {
 
     class Solution {
         fun solution(clothes: Array<Array<String>>): Int {
-            var answer = 1
+            var answer = 0
             val clothesMap = mutableMapOf<String,Int>()
 
             clothes.forEach {
@@ -22,9 +22,7 @@ class `위장` {
                 }
             }
 
-            clothesMap.forEach {
-                answer *= it.value + 1
-            }
+            answer = clothesMap.map { it.value }.fold(1) {total, next -> total * (next+1) }
             return answer-1
         }
     }
@@ -33,8 +31,8 @@ class `위장` {
 fun main() {
     val solution = `위장`.getSolution()
     println(solution.solution(arrayOf(
-        arrayOf("crowmask", "face"),
-        arrayOf("bluesunglasses", "face"),
-        arrayOf("smoky_makeup", "face"),
+        arrayOf("yellowhat", "headgear"),
+        arrayOf("bluesunglasses", "eyewear"),
+        arrayOf("green_turban", "headgear"),
     )))
 }
