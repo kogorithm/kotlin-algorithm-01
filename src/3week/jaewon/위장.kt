@@ -1,4 +1,4 @@
-package week3.jaewon
+package `3week`.jaewon
 
 class `위장` {
     companion object {
@@ -16,7 +16,7 @@ class `위장` {
 }
 
 fun main(){
-    val solution = `위장`.getSolution()
+    val solution = 위장.getSolution()
     println(solution.solution(arrayOf(arrayOf("yellowhat", "headgear"),
                                         arrayOf("bluesunglasses", "eyewear"),
                                         arrayOf("green_turban", "headgear"))))

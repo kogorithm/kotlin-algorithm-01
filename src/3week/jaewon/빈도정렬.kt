@@ -1,4 +1,4 @@
-package week3.jaewon
+package `3week`.jaewon
 
 fun main(){
     readln().split(" ").map { it.toInt()}
