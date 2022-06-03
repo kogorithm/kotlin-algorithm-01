@@ -1,37 +1,65 @@
 package `3week`.hyunsoo
 
+import java.io.BufferedReader
+import java.io.BufferedWriter
+import java.io.InputStreamReader
+import java.io.OutputStreamWriter
+
 fun main() {
 
-    val stringList = mutableListOf<String>()
-    var count = 0
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val bw = BufferedWriter(OutputStreamWriter(System.out))
 
-    val (row, col) = readln().split(" ").map { it.toInt() }
+    val stringList = mutableListOf<String>()
+    val stringSet = mutableSetOf<String>()
+
+    var result = 0
+    val (row, col) = br.readLine().split(" ").map { it.toInt() }
 
     repeat(row) {
-        val string = readln()
+        val string = br.readLine()
         stringList.add(string)
     }
 
-    for (rowIndex in 0..row - 2) {
+    // start, end 는 row의 인덱스임
+    var start = 0
+    var end = row - 1
 
-        val stringSet = mutableSetOf<String>()
+    var isOverlap = false
+
+    while (start <= end) {
+
+        val mid = (start + end) / 2
+
         for (colIndex in 0 until col) {
 
             var newString = ""
 
-            for (Index in rowIndex + 1..row - 1) {
-                newString += stringList[Index][colIndex]
+            for (rowIndex in mid until row) {
+                newString += stringList[rowIndex][colIndex]
             }
 
+            // 중복된 값있는지 찾기
             if (stringSet.add(newString) == false) {
-                println(count)
-                return
+                isOverlap = true
+                break
             }
         }
-        count++
-        stringList[rowIndex] = "0"
-    }
 
-    println(count)
+        // 중복된 값이 있으면
+        if (isOverlap) {
+            end = mid - 1
+            // 중복된 값이 없으면
+        } else {
+            result = mid
+            start = mid + 1
+        }
+
+        isOverlap = false
+
+    }
+    bw.write("$result")
+    bw.flush()
+    bw.close()
 
 }
