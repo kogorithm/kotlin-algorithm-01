@@ -7,7 +7,7 @@ fun main() {
     val str = br.readLine()
     val set = mutableSetOf<String>()
     val length = str.length
-    Array(length) { i ->
+    repeat(length) { i ->
         IntRange(i + 1, length).forEach { j ->
             set.add(str.substring(i until j))
         }
