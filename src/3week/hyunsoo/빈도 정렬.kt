@@ -10,16 +10,17 @@ fun main() {
     val sequence = readln().split(" ").map { it.toInt() }
 
     sequence.forEach {
-        if (frequencySort.containsKey(it)) {
-            frequencySort[it] = frequencySort[it]!! + 1
-        } else frequencySort.put(it, 1)
+
+        frequencySort.put(it, frequencySort.getOrDefault(it, 0) + 1)
     }
 
 
     frequencySort.toList().sortedByDescending { it.second }.toMap()
         .forEach { map ->
+            var ans =""
             repeat(map.value) {
-                print("${map.key} ")
+                ans += "${map.key} "
             }
+            print(ans)
         }
 }

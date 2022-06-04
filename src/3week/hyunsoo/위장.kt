@@ -15,11 +15,7 @@ class `위장` {
             val clothesMap = mutableMapOf<String,Int>()
 
             clothes.forEach {
-                if (clothesMap.containsKey(it[1])){
-                    clothesMap[it[1]] = clothesMap[it[1]]!! + 1
-                } else {
-                    clothesMap.put(it[1], 1)
-                }
+                clothesMap.put(it[1], clothesMap.getOrDefault(it[1], 0) + 1)
             }
 
             answer = clothesMap.map { it.value }.fold(1) {total, next -> total * (next+1) }
