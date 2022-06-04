@@ -20,19 +20,19 @@ fun main() {
         word.add(tmp)
     }
 
-    Loop1@
     for (i in 1 until r) {
         val set = hashSetOf<String>()
-        Loop2@
         for (j in 0 until c) {
             var cur = word[j].substring(i)
 
-            // cur가 중복된 문자열이라면 Loop1까지 빠져나오고 break
-            if (set.contains(cur)) break@Loop1
+            // cur가 중복된 문자열이라면 출력 후 return
+            if (set.contains(cur)) {
+                println(ans)
+                return
+            }
             // 중복되지 않았다면 set에 cur 문자열 추가
             else set.add(cur)
         }
         ans++
     }
-    println(ans)
 }
