@@ -8,14 +8,10 @@ fun solution(periods: IntArray, payments: Array<IntArray>, estimates: IntArray):
         when(pair.first){
             in 0 until 24 -> { }
             in 24 until 60 -> {
-                if(pair.second.sum() >= 900000){
-                    isVIP.add(index,true)
-                }
+                if(pair.second.sum() >= 900000){ isVIP.add(index,true) }
             }
             else -> {
-                if(pair.second.sum() >= 600000){
-                    isVIP.add(index,true)
-                }
+                if(pair.second.sum() >= 600000){ isVIP.add(index,true) }
             }
         }
     }
@@ -25,22 +21,12 @@ fun solution(periods: IntArray, payments: Array<IntArray>, estimates: IntArray):
         when(pair.first+1){
             in 0 until 24 -> { }
             in 24 until 60 -> {
-                if(isVIP[index] && newSum < 900000){
-                    // 이전달에 VIP였지만 이번달은 VIP가 아닌경우
-                    answer[1]++
-                }
-                if(!isVIP[index] && newSum >= 900000){
-                    answer[0]++
-                }
+                if(isVIP[index] && newSum < 900000){ answer[1]++ }
+                if(!isVIP[index] && newSum >= 900000){ answer[0]++ }
             }
             else -> {
-                if(isVIP[index] && newSum < 600000){
-                    // 이전달에 VIP였지만 이번달은 VIP가 아닌경우
-                    answer[1]++
-                }
-                if(!isVIP[index] && newSum >= 600000){
-                    answer[0]++
-                }
+                if(isVIP[index] && newSum < 600000){ answer[1]++}
+                if(!isVIP[index] && newSum >= 600000){ answer[0]++ }
             }
         }
     }
