@@ -1,4 +1,4 @@
-package `sk인턴쉽 `
+package `4week`.hyunsoo
 
 // 54분에 컷
 fun main() {

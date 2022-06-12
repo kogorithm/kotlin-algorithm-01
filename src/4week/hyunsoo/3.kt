@@ -1,4 +1,4 @@
-package `sk인턴쉽 `
+package `4week`.hyunsoo
 
 // 12:07까지
 fun main(){

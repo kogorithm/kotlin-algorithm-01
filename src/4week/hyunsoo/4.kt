@@ -1,4 +1,4 @@
-package `sk인턴쉽 `
+package `4week`.hyunsoo
 
 
 var minDay = 99999999

@@ -1,4 +1,4 @@
-package `sk인턴쉽 `
+package `4week`.hyunsoo
 
 // 보자마자 버블 정렬 생각남.
 // 13분만에 컷
