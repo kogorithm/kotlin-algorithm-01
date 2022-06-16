@@ -26,7 +26,6 @@ class Third {
 
             return clients.map {
                 val (data, optionalSet) = planToMap(*it.split(" ").map { it.toInt() }.toIntArray())
-                planList.filter { it.first > data && it.second.containsAll(optionalSet) }
                 var answer = 0
                 for (i in 0 until planList.size) {
                     val current = planList.get(i)
