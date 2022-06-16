@@ -22,6 +22,10 @@ class `타겟 넘버` {
             dfs(n + 1, sum - numbers[n], numbers, target)
         }
     }
+
+    /*
+        이거보는데 대단하더라구요 https://programmers.co.kr/learn/courses/30/lessons/43165/solution_groups?language=kotlin
+     */
 }
 
 fun main() {
