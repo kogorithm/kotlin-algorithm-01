@@ -4,10 +4,6 @@ var map = arrayOf<IntArray>()
 var mapVisited = arrayOf<BooleanArray>()
 var mapAns = 0
 
-// 8방향 탐색
-val dx = intArrayOf(0, 0, -1, 1, -1, -1, 1, 1)
-val dy = intArrayOf(-1, 1, 0, 0, -1, 1, -1, 1)
-
 fun main() {
 
     while(true) {
@@ -39,6 +35,10 @@ fun main() {
 }
 
 fun DFS(col : Int, row : Int, h : Int,  w : Int) {
+    // 8방향 탐색
+    val dx = intArrayOf(0, 0, -1, 1, -1, -1, 1, 1)
+    val dy = intArrayOf(-1, 1, 0, 0, -1, 1, -1, 1)
+
     for (d in 0 until 8) {
         var newX = row + dx[d]
         var newY = col + dy[d]
