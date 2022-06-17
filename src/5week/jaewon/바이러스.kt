@@ -1,4 +1,4 @@
-package `4week`.jaewon
+package `5week`.jaewon
 
 fun main(){
     val n = readln().toInt() //정점의 갯수
