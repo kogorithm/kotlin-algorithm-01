@@ -1,7 +1,7 @@
 package `5week`.jaewon
 
 fun main(){
-    var answer = Array(2){0}
+    val answer = Array(2){0}
     val (n,m) = readln().split(" ").map{it.toInt()}
     val matrix = Array(m){ mutableListOf<Int>()}
     val visited = Array(m){ Array(n){false}}
@@ -9,22 +9,15 @@ fun main(){
         val list = readln().map{ if( it == 'W' ) 1 else 0 }.toMutableList()
         matrix[index] = list
     }
-
-    //아군
+    
     matrix.forEachIndexed { i, it ->
         it.forEachIndexed{ j, _ ->
-            if(!visited[i][j] && matrix[i][j] == 1){
+            if(!visited[i][j] && matrix[i][j] == 1){ //아군
                 visited[i][j] = true
                 val temp = findOurs(matrix,visited,i,j,1)
                 answer[0] += temp*temp
             }
-        }
-    }
-
-    //적군
-    matrix.forEachIndexed { i, it ->
-        it.forEachIndexed{ j, _ ->
-            if(!visited[i][j] && matrix[i][j] == 0){
+            if(!visited[i][j] && matrix[i][j] == 0){ //적군
                 visited[i][j] = true
                 val temp = findOurs(matrix,visited,i,j,0)
                 answer[1] += temp*temp
