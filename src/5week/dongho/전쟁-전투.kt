@@ -50,8 +50,8 @@ class `전쟁-전투` {
     private fun dfs(position: Pair<Int, Int>, color: Char) {
         visit[position.first][position.second] = true
         count += 1
-        for (i in 0 until 4) {
-            val np = position + direction.get(i)
+        direction.forEach { dir ->
+            val np = position + dir
             if (rangeCheck(np) && map[np.first][np.second] === color && visit[np.first][np.second] === false) {
                 dfs(np, map[np.first][np.second])
             }
