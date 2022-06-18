@@ -27,7 +27,6 @@ class `타겟 넘버` {
 
             dfs(cnt+1,numbers,target,sum + numbers[cnt])
             dfs(cnt+1,numbers,target,sum - numbers[cnt])
-
         }
     }
 }
