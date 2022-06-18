@@ -23,10 +23,6 @@ fun main() {
         netWork[b].add(a)
     }
 
-    netWork.forEach {
-        println(it)
-    }
-
     dfs(1)
     println(ans)
 
