@@ -7,14 +7,14 @@ fun main() {
     var stack = Stack<Char>()
     var cnt = 0
 
-    input.forEach {
-        if (it.equals('(')) {
-            stack.push(it)
+    for (i in 0 until input.length) {
+        if (input[i].equals('(')) {
+            stack.push(input[i])
         }
-        else if (it.equals(')')) {
+        else if (input[i].equals(')')) {
             stack.pop()
 
-            if ((it-1).equals('(')) {
+            if (input[i-1].equals('(')) {
                 cnt += stack.size
             }
             else {
