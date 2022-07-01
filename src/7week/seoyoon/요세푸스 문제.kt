@@ -11,7 +11,7 @@ fun main() {
     (1 .. n).forEach {
         queue.add(it)
     }
-    
+
     var idx = 1
     while (queue.isNotEmpty()) {
         if (idx == k) {
