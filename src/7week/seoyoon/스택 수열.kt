@@ -28,8 +28,6 @@ fun main() {
         println("NO")
     }
     else {
-        answer.forEach {
-            println(it)
-        }
+        println(answer.joinToString("\n"))
     }
 }
