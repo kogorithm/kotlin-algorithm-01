@@ -11,7 +11,7 @@ fun main() {
         if (input[i].equals('(')) {
             stack.push(input[i])
         }
-        else if (input[i].equals(')')) {
+        else {
             stack.pop()
 
             if (input[i-1].equals('(')) {
