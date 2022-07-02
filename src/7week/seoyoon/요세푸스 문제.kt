@@ -24,10 +24,6 @@ fun main() {
             idx++
         }
     }
-
-    print("<")
-    for (i in 0 until answer.size-1) {
-        print("${answer.poll()}, ")
-    }
-    print("${answer.poll()}>")
+    
+    println("<${answer.joinToString(", ")}>")
 }
