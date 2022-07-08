@@ -1,7 +1,5 @@
 package `7week`.hyunsoo
 
-import java.util.Stack
-
 fun main() {
 
     val (n, k) = readln().split(" ").map { it.toInt() }
