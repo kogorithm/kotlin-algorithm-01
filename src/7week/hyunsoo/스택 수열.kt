@@ -17,13 +17,18 @@ fun main() {
 
     var curNum = 1
     var searchingIndex = 0
+
     while (curNum <= n) {
+
         stack.push(curNum++)
         operatorList.push("+")
+
         while (stack.peek() == numList[searchingIndex]) {
+
             operatorList.push("-")
             searchingIndex++
             stack.pop()
+
             if (stack.isEmpty()) break
         }
 
