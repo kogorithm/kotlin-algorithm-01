@@ -1,5 +1,4 @@
 package `7week`.hyunsoo
-
 import java.util.Stack
 
 fun main() {
